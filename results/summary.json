@@ -10,9 +10,9 @@
       "rmse": 0.041740000000000006,
       "rmse_std": 0.0022517548712060118,
       "rmse_folds": null,
-      "mae": null,
-      "r2": null,
-      "mono_violation_rate": null
+      "mae": 0.0335,
+      "r2": 0.8485,
+      "mono_violation_rate": 0.4276
     },
     {
       "dataset": "Oxford",
@@ -20,9 +20,9 @@
       "rmse": 0.02152,
       "rmse_std": 0.004528752587633817,
       "rmse_folds": null,
-      "mae": null,
-      "r2": null,
-      "mono_violation_rate": null
+      "mae": 0.0141,
+      "r2": 0.9363,
+      "mono_violation_rate": 0.2397
     },
     {
       "dataset": "CALCE",
@@ -30,9 +30,9 @@
       "rmse": 0.05436,
       "rmse_std": 0.014663232931383175,
       "rmse_folds": null,
-      "mae": null,
-      "r2": null,
-      "mono_violation_rate": null
+      "mae": 0.0312,
+      "r2": 0.9352,
+      "mono_violation_rate": 0.4651
     }
   ],
   "data_sources": {
