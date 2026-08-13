@@ -28,7 +28,7 @@ Run: `python scripts/verify_repo.py`
 | Oxford SOH RMSE | ~0.021 | **0.0215 ± 0.0045** (aligns with paper scale) |
 | CALCE SOH RMSE | — | **0.0544 ± 0.0147** (cross-chemistry benchmark only) |
 
-Metrics are taken from `results/paper_experiment_report.json` and are **not adjusted** to match the article.
+Metrics are taken from `results/paper_experiment_report.json` / `results/summary.json` and are **not adjusted** to match the article.
 
 ### Per independent run (pooled OOF SOH RMSE)
 
@@ -40,11 +40,21 @@ Metrics are taken from `results/paper_experiment_report.json` and are **not adju
 | 4 | 0.0407 | 0.0266 | 0.0835 |
 | 5 | 0.0456 | 0.0205 | 0.0464 |
 
+### Supplementary metrics (dissertation Table 8)
+
+| Dataset | MAE | R² | Mono. violation rate |
+|:---|:---:|:---:|:---:|
+| Oxford | 0.0141 ± 0.0034 | 0.9363 ± 0.0295 | 0.2397 ± 0.0662 |
+| NASA | 0.0335 ± 0.0048 | 0.8485 ± 0.0360 | 0.4276 ± 0.0260 |
+| CALCE | 0.0312 ± 0.0040 | 0.9352 ± 0.0219 | 0.4651 ± 0.0119 |
+
+**Primary comparison metric remains SOH RMSE.** MSE is the training objective (not a separate headline results table).
+
 ## Known limitations (for viva)
 
 - **NASA:** Cycle-level stratified CV (not GroupKFold by cell); Q-profile construction may differ from the paper’s internal pipeline.  
 - **Oxford:** Uses **characterisation (C1ch)** cycles, not discharge profiles.  
-- **Report:** RMSE aggregates from completed training; re-run `run_paper_experiment.py` to refresh R²/MAE/fold detail in JSON if needed.
+- **Monotonicity:** Non-zero violation rates on all datasets (highest on CALCE/NASA); no post-hoc isotonic smoothing applied.
 
 ## Reproduce
 

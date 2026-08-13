@@ -37,6 +37,14 @@ Results are **reported honestly** from completed training; metrics are not adjus
 | **Oxford** | **0.0215 ± 0.0045** | 0.0268, **0.0154**, 0.0183, 0.0266, 0.0205 | Same order as **0.021** |
 | **CALCE** | **0.0544 ± 0.0147** | 0.0502, 0.0454, 0.0463, 0.0835, 0.0464 | Cross-dataset benchmark |
 
+### Supplementary metrics (MAE, R², monotonicity)
+
+| Dataset | MAE | R² | Mono. violation rate |
+|:---|:---:|:---:|:---:|
+| **Oxford** | **0.0141 ± 0.0034** | **0.9363 ± 0.0295** | **0.2397 ± 0.0662** |
+| **NASA PCoE** | **0.0335 ± 0.0048** | **0.8485 ± 0.0360** | **0.4276 ± 0.0260** |
+| **CALCE** | **0.0312 ± 0.0040** | **0.9352 ± 0.0219** | **0.4651 ± 0.0119** |
+
 **Figures:** `results/figures/fig01_soh_trajectories` · `fig02_soh_scatter` · `fig03_soh_rmse_comparison` · `fig04_training_convergence`
 
 **Interpretation:** The pipeline and architecture reproduce the paper’s **Oxford** accuracy. The **NASA** gap is discussed in [docs/RESULTS.md](docs/RESULTS.md) and [docs/PAPER_METHODOLOGY.md](docs/PAPER_METHODOLOGY.md) (CV pooling across cells, feature construction, training stability). See [docs/SUPERVISOR_GUIDE.md](docs/SUPERVISOR_GUIDE.md) for examiner-facing notes.
